@@ -729,6 +729,7 @@ const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
 const keyboard = document.querySelector("[data-keyboard]")
 const alertContainer = document.querySelector("[data-alert-container]")
+const resultatContainer = document.querySelector("[result-alert-container]")
 const guessGrid = document.querySelector("[data-guess-grid]")
 const offsetFromDate = new Date(2022, 0, 1)
 const msOffset = Date.now() - offsetFromDate
@@ -864,11 +865,26 @@ function getActiveTiles() {
   return guessGrid.querySelectorAll('[data-state="active"]')
 }
 
-function showAlert(message, duration = 1000) {
+function showAlert(message, duration = 5000) {
   const alert = document.createElement("div")
   alert.textContent = message
   alert.classList.add("alert")
   alertContainer.prepend(alert)
+  if (duration == null) return
+
+  setTimeout(() => {
+    alert.classList.add("hide")
+    alert.addEventListener("transitionend", () => {
+      alert.remove()
+    })
+  }, duration)
+}
+
+function showResult(message, duration = 5000) {
+  const alert = document.createElement("div")
+  alert.textContent = message
+  alert.classList.add("alert")
+  resultatContainer.prepend(alert)
   if (duration == null) return
 
   setTimeout(() => {
