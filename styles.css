@@ -20,10 +20,20 @@ body {
   color: #fff;
 }
 
+.tornar {
+  position: relative;
+}
+
+a.bototornar {
+  position: absolute;
+  right: 0;
+  top: -30px;
+}
+
 .keyboard { 
   display: grid;
-  grid-template-columns: repeat(20, minmax(auto, 1.25em));
-  grid-auto-rows: 3em;
+  grid-template-columns: repeat(22, minmax(auto, 1.25em));
+  grid-auto-rows: 2em;
   gap: .25em;
   justify-content: center;
 }
