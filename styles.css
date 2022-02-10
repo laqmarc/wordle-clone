@@ -28,7 +28,7 @@ body {
   justify-content: center;
 }
 
-div#de5 .keyboard {
+div#general .keyboard {
   grid-template-columns: repeat(8, minmax(auto, 3em));
 
 }
@@ -93,6 +93,11 @@ div#de5 .keyboard {
   margin-bottom: 1em;
 }
 
+div#de4 .guess-grid {
+
+  grid-template-columns: repeat(4, 4em);
+
+}
 .tile {
   font-size: 2em;
   color: white;

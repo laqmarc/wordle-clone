@@ -720,10 +720,8 @@ const dictionary = [
 
 //Z 16
 "zaire", "zajal", "zebra", "zeids", "zelar", "zenit", "zeros", "zigot", "zloty", "zoeci", "zombi", "zonal", "zonat", "zones", "zulus", "Zuric",
-
-
-
 ]
+
 const WORD_LENGTH = 5
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
