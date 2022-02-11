@@ -238,6 +238,10 @@ a {
   opacity: 0;
 }
 
+a.disabled {
+  pointer-events: none;
+}
+
 @media (max-width: 600px) {
   .keyboard {
 
