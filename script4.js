@@ -266,7 +266,13 @@ function shakeTiles(tiles) {
 
 function checkWinLose(guess, tiles) {
   if (guess === targetWord) {
-    showAlert("HAS GUANYAT", 5000)
+    showAlert("HAS GUANYAT-  ENLLAÇ A LA WIKI ->  http://ca.wikipedia.org/wiki/" + targetWord, 7000)
+    danceTiles(tiles)
+    stopInteraction()
+    showAlert("HAS GUANYAT - ENLLAÇ A LA ENCICLOPEDIA ->  http://www.enciclopedia.cat/search/site/" + targetWord, 8000)
+    danceTiles(tiles)
+    stopInteraction()
+    showAlert("HAS GUANYAT - ENLLAÇ ALS SINÒNIMS ->    https://www.softcatala.org/diccionari-de-sinonims/paraula/" + targetWord, 9000)
     danceTiles(tiles)
     stopInteraction()
     return
